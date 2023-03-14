@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Form validation exercise</h1>
+    <h2>Fill the following form</h2>
+    <form novalidate>
+        <div id="errorField"></div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <label for="country">Country: </label>
+        <input name="country" id="country" required>
+        <label for="zipcode">Zipcode: </label>
+        <input name="zipcode" id="zipcode" required>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" minlength="8" required>
+        <label for="confirm-password">Confirm password: </label>
+        <input type="password" name="confirm-password" id="confirm-password">
+        <button>Submit</button>
+    </form>
+</body>
+</html>
