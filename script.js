@@ -27,7 +27,7 @@ form.addEventListener('submit', e => {
 
 function isEmpty(input) {
     if (input.validity.valueMissing) {
-        errorField.textContent += `${input.id} missing`;
+        errorField.textContent += `${input.id} missing. `;
         input.validity.valid = false;
     } else {
         input.validity.valid = true;
@@ -36,7 +36,7 @@ function isEmpty(input) {
 
 function match(val1, val2) {
     if (val1 != val2) {
-        errorField.textContent += `${val1.is}s don't match`;
+        errorField.textContent += `${val1.is}s don't match. `;
         val1.validity.valid = false;
         val2.validity.valid = false;
     } else {
@@ -47,7 +47,7 @@ function match(val1, val2) {
 
 function lengthCheck(input) {
     if (input.validity.tooShort) {
-        errorField.textContent += `${input.id} is too short`;
+        errorField.textContent += `${input.id} is too short. `;
         input.validity.valid = false;
     } else {
         input.validity.valid = true;
@@ -56,7 +56,7 @@ function lengthCheck(input) {
 
 function typeCheck(input) {
     if (input.validity.typeMismatch) {
-        errorField.textContent += `${input.id} is not in the right format`;
+        errorField.textContent += `${input.id} is not in the right format. `;
         input.validity.valid = false;
     } else {
         input.validity.valid = true;
